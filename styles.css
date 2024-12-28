@@ -1,12 +1,22 @@
+/* GLOBAL */
 body {
     font-family: 'Satisfy', cursive;
     margin: 0;
     padding: 0;
-    background-color: #68c499;
+    background: linear-gradient(rgba(255, 255, 255, 0.342), rgba(255, 255, 255, 0.5)), 
+                url('img/textura3.webp') no-repeat center fixed;
+    background-size: cover;
+    background-color: #68c499; /* Fondo de respaldo */
+    background-attachment: fixed; /* Fija el fondo */
 }
 
+.satisfy-font {
+    font-family: 'Satisfy', cursive;
+}
+
+/* HEADER */
 header {
-    background-color: #127826;
+    background-color: #589ec7;
     color: white;
     text-align: center;
     padding: 1em 0;
@@ -17,22 +27,167 @@ header {
     position: absolute;
     left: 20px;
     top: 10px;
-    width: 75px; /* Ajusta el tamaño del logo aquí */
+    width: 75px; /* Tamaño del logo */
     height: auto;
 }
 
+/* BÚSQUEDA */
+.search-section {
+    text-align: center;
+    margin: 1em auto;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo con transparencia */
+    border-radius: 10px; /* Bordes redondeados */
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  Sombra */
+    max-width: 80%;
+}
+
+.search-section input {
+    padding: 0.5em;
+    margin-right: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo para las imágenes del resultado de la búsqueda */
+#searchResult img {
+    border: 10px solid #589ec7; /* Mismo borde azul oscuro */
+    border-radius: 15px; /* Bordes redondeados */
+    background-color: #204459; /* Fondo blanco detrás del borde */
+    padding: 10px; /* Espaciado interno para separar el contenido del marco */
+   /* box-shadow: 0px 0px 0px 5px #b0c4de, /* Segundo borde: color gris claro (simula el segundo borde) */
+               /* 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    max-width: 40%; /* Tamaño máximo (responsivo) */
+    margin: 20px auto; /* Centrar y separar entre elementos */
+    display: block; /* Asegurar que se comporte como bloque */
+}
+#searchResult p {
+    color: #333; /* Color del texto */
+    font-size: 14px; /* Tamaño de la fuente */
+    font-family: 'Satisfy', cursive; /* Tipo de fuente */
+    margin: 10px 0 0; /* Separación arriba */
+    text-align: center; /* Alinear al centro */
+}
+/* Separar los botones */
+#searchBtn, #backButton {
+    margin: 10px; /* Separación entre los botones */
+    padding: 10px 15px; /* Tamaño del botón */
+    border: none; /* Eliminar bordes (si ya están estilizados) */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #204459; /* Fondo azul oscuro */
+    color: white; /* Texto blanco */
+    cursor: pointer; /* Mostrar que es clickeable */
+}
+/* Botón al pasar el mouse */
+#searchBtn:hover, #backButton:hover {
+    background-color: #589ec7; /* Azul más oscuro al pasar el mouse */
+}
+
+.search-section button {
+    padding: 0.5em 1em;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-section button:hover {
+    background-color: #555;
+}
+
+
+
+
+
+
+/* Estilo para las pestañas */
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    background-color: #204459;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.tab-button:hover {
+    background-color: #589ec7;
+}
+
+.tab-button.active {
+    background-color: #68c499;
+}
+
+/* Estilo para el contenido de las pestañas */
+.tab-content {
+    display: none; /* Por defecto, oculta todo */
+    /*text-align: center;*/
+}
+
+.tab-content.active {
+    display: block; /* Muestra solo la pestaña activa */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* GALERÍA */
 .gallery {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite el ajuste a varias líneas */
+    /*grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Diseño responsivo */
+    gap: 10px; /* Espaciado uniforme */
     justify-content: center;
     padding: 2em;
 }
 
-.drawing {
-    margin: 1em;
-    text-align: center;
-    width: calc(19% - 2em); /* Ajusta el ancho según sea necesario */
+.gallery img {
+    width: 200px; /* Ajusta el tamaño de las imágenes */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.image-row { /* NUEVO: Estilo para las filas */
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 20px; /* Espacio entre filas */
+}
+.image-row img {
+    flex: 1 0 calc(25% - 20px); /* Para 4 imágenes por fila */
+    margin: 10px;
     box-sizing: border-box;
+    max-width: 200px;
+    height: auto;
+}
+
+.drawing {
+    text-align: center;
 }
 
 .drawing img {
@@ -40,70 +195,55 @@ header {
     height: auto;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.2s;
-    cursor: pointer; /* Añadir cursor de puntero para indicar que es clicable */
+    border: 5px solid #589ec7;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #204459;
+    box-shadow: 0px 0px 0px 5px #292e3492, /* Segundo borde: color gris claro (simula el segundo borde) */
+                0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    margin-bottom: 5px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
 }
 
 .drawing img:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
+/* BOTÓN ATRÁS */
+#btnAtras {
     position: fixed;
-    bottom: 0;
-    width: 100%;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
 }
 
-/* Nueva Sección con Fondo de Color */
-.color-background {
-    background-color: rgba(173, 216, 230, 0.8); /* Color azul claro con transparencia */
-    padding: 2em;
-    text-align: center;
+#btnAtras:hover {
+    background-color: #0056b3;
 }
 
-/* Nueva Sección con Imagen de Fondo con Transparencia */
-.image-background {
-    background-image: url('img/background.jpg'); /* Asegúrate de tener esta imagen en la carpeta img */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.5); /* Color blanco con transparencia para superponer */
-    padding: 2em;
-    text-align: center;
-    position: relative;
-}
-
-.image-background::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Oscurece la imagen de fondo */
-    z-index: -1;
-}
-
-/* Estilos para el modal */
+/* MODAL */
 .modal {
-    display: none; /* Oculto por defecto */
+    display: none;
     position: fixed;
-    z-index: 1;
-    padding-top: 60px;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.9);
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Añadir transición para apertura del modal */
+    background-color: rgba(0, 0, 0, 0.9);
     opacity: 0;
     transform: scale(0.8);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .modal.show {
@@ -117,8 +257,20 @@ footer {
     display: block;
     width: 80%;
     max-width: 700px;
+    border-radius: 10px;
+    border: 5px solid #589ec7;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #204459;
 }
 
+.caption {
+    font-family: 'Satisfy', cursive;
+    font-size: 20px; /* Ajusta el tamaño de la letra según tus necesidades */
+    text-align: center; /* Centra el texto debajo de la imagen */
+    color: #333; /* Cambia el color del texto si lo deseas */
+    margin-top: 10px; /* Agrega espacio entre la imagen y el texto */
+}
 #caption {
     margin: auto;
     display: block;
@@ -128,16 +280,6 @@ footer {
     color: #ccc;
     padding: 10px 0;
     height: 150px;
-}
-
-.modal-content, #caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
 }
 
 .close {
@@ -155,4 +297,129 @@ footer {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* SECCIÓN CONTACTO */
+.contacto {
+    background-image: url(img/contact_bg.png);
+    background-color: #204459;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.contacto .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contacto h2 {
+    font-size: 48px;
+    font-family: 'Satisfy', cursive;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.contacto .fila {
+    display: flex;
+}
+
+.contacto .col {
+    width: 50%;
+    padding: 10px;
+    position: relative;
+    padding-right: 50px; /* Ajusta este valor según necesites */
+    padding-left: 50px; /* Ajusta este valor según necesites */
+}
+
+.contacto .col input, .contacto .col textarea {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 18px;
+    font-family: 'Satisfy', cursive;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.contacto .col input:focus, .contacto .col textarea:focus {
+    border-color: #1ca4b6;
+    outline: none;
+    background-color: white;
+}
+
+.contacto button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+    font-family: 'Satisfy', cursive;
+    border-radius: 10px;
+}
+
+.contacto button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1ca4b6;
+    z-index: -1;
+    transition: 1s;
+}
+
+.contacto button:hover .overlay {
+    width: 100%;
+}
+
+.contacto .col img {
+    width: 80%;
+    margin-right: 20px;
+}
+.contacto .col .info{
+    position: absolute;
+    top: 40%;
+    background-color: #252A2E;
+    padding: 20px;
+    max-width: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Satisfy', cursive;
+    border-radius: 10px; /* Bordes redondeados */
+}
+.contacto .col form { /* O el selector que corresponda a tu formulario */
+    margin-left: 20px; /* Ajusta este valor según necesites */
+}
+.contacto .col .info ul{
+    list-style: none;
+}
+
+.contacto .col .info ul li{
+    margin-bottom: 20px;
+}
+
+.contacto .col .info ul li i{
+    color: #1ca4b6; 
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+/* FOOTER */
+footer {
+    background-color: #204459;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 14px;
 }
