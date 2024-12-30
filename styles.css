@@ -13,7 +13,6 @@ body {
 .satisfy-font {
     font-family: 'Satisfy', cursive;
 }
-
 /* HEADER */
 header {
     display: flex;
@@ -25,7 +24,6 @@ header {
     padding: 20px;
     position: relative;
 }
-
 header .logo {
     max-width: 150px;
     /*position: absolute;*/
@@ -40,7 +38,6 @@ header h1 {
     font-size: 2rem;
     margin: 0;
 }
-
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
     header .logo {
@@ -88,8 +85,6 @@ header h1 {
     margin: 10px 0 0; /* Separación arriba */
     text-align: center; /* Alinear al centro */
 }
-
-
 /* Separar los botones */
 #searchBtn, #backButton {
     margin: 10px; /* Separación entre los botones */
@@ -104,7 +99,6 @@ header h1 {
 #searchBtn:hover, #backButton:hover {
     background-color: #589ec7; /* Azul más oscuro al pasar el mouse */
 }
-
 .search-section button {
     padding: 0.5em 1em;
     background-color: #333;
@@ -114,13 +108,9 @@ header h1 {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 .search-section button:hover {
     background-color: #555;
 }
-
-
-
 /* Estilo para las pestañas */
 .tabs-container {
     display: flex;
@@ -129,7 +119,6 @@ header h1 {
     align-items: center;
     margin-bottom: 20px;
 }
-
 .tab-button {
     padding: 10px 20px;
     background-color: #204459;
@@ -139,26 +128,20 @@ header h1 {
     margin: 0 5px;
     cursor: pointer;
 }
-
 .tab-button:hover {
     background-color: #589ec7;
 }
-
 .tab-button.active {
     background-color: #68c499;
 }
-
 /* Estilo para el contenido de las pestañas */
 .tab-content {
     display: none; /* Por defecto, oculta todo */
     /*text-align: center;*/
 }
-
 .tab-content.active {
     display: block; /* Muestra solo la pestaña activa */
 }
-
-
 /* GALERÍA */
 .gallery {
     display: flex;
@@ -168,7 +151,6 @@ header h1 {
     justify-content: center;
     padding: 2em;
 }
-
 .gallery img {
     border: 5px solid #333; /* Borde oscuro principal */
     /*outline: 5px solid #555;*/
@@ -179,12 +161,10 @@ header h1 {
     transform: scale(1);
     cursor: pointer;
 }
-
 .gallery img:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px #1d1d1d; /* Intensificar el decorativo */
 }
-
 .image-row { /* NUEVO: Estilo para las filas */
     display: grid;
     gap: 20px;
@@ -201,12 +181,10 @@ header h1 {
     max-width: 200px;
     height: auto;
 }
-
 /* Estilos para los dibujos individuales */
 .drawing {
     text-align: center;
 }
-
 .drawing img {
     max-width: 100%;
    /* width: 100%;*/
@@ -229,13 +207,10 @@ header h1 {
     font-family: "Satisfy", cursive;
     font-size: 16px;
   }
-
-
 .drawing img:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.425);
 }
-
 /* BOTÓN ATRÁS */
 #btnAtras {
     position: fixed;
@@ -250,12 +225,10 @@ header h1 {
     z-index: 1000;
     display: none;
 }
-
 #btnAtras:hover {
     background-color: #0056b3;
 }
-
-/* MODAL */
+ MODAL */
 .modal {
     display: none;
     position: fixed;
@@ -270,13 +243,11 @@ header h1 {
     transform: scale(0.8);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
-
 .modal.show {
     display: block;
     opacity: 1;
     transform: scale(1);
 }
-
 .modal-content {
     margin: auto;
     display: block;
@@ -288,7 +259,6 @@ header h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #204459;
 }
-
 .caption {
     font-family: 'Satisfy', cursive;
     font-size: 20px; /* Ajusta el tamaño de la letra según tus necesidades */
@@ -306,7 +276,6 @@ header h1 {
     padding: 10px 0;
     height: 150px;
 }
-
 .close {
     position: absolute;
     top: 15px;
@@ -316,14 +285,12 @@ header h1 {
     font-weight: bold;
     transition: 0.3s;
 }
-
 .close:hover,
 .close:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
 }
-
 /* SECCIÓN CONTACTO */
 .contacto {
     background-image: url(img/contact_bg.png);
@@ -331,23 +298,19 @@ header h1 {
     color: #fff;
     padding: 50px 0;
 }
-
 .contacto .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
-
 .contacto h2 {
     font-size: 48px;
     font-family: 'Satisfy', cursive;
     text-align: center;
     padding: 20px 0;
 }
-
 .contacto .fila {
     display: flex;
 }
-
 .contacto .col {
     width: 50%;
     padding: 10px;
@@ -355,7 +318,6 @@ header h1 {
     padding-right: 50px; /* Ajusta este valor según necesites */
     padding-left: 50px; /* Ajusta este valor según necesites */
 }
-
 .contacto .col input, .contacto .col textarea {
     display: block;
     width: 100%;
@@ -369,13 +331,11 @@ header h1 {
     border-radius: 10px;
     transition: border-color 0.3s ease;
 }
-
 .contacto .col input:focus, .contacto .col textarea:focus {
     border-color: #1ca4b6;
     outline: none;
     background-color: white;
 }
-
 .contacto button {
     cursor: pointer;
     background-color: transparent;
@@ -391,7 +351,6 @@ header h1 {
     font-family: 'Satisfy', cursive;
     border-radius: 10px;
 }
-
 .contacto button .overlay {
     position: absolute;
     top: 0;
@@ -402,11 +361,9 @@ header h1 {
     z-index: -1;
     transition: 1s;
 }
-
 .contacto button:hover .overlay {
     width: 100%;
 }
-
 .contacto .col img {
     width: 80%;
     margin-right: 20px;
@@ -428,18 +385,14 @@ header h1 {
 .contacto .col .info ul{
     list-style: none;
 }
-
 .contacto .col .info ul li{
     margin-bottom: 20px;
 }
-
 .contacto .col .info ul li i{
     color: #1ca4b6; 
     display: inline-block;
     margin-right: 20px;
 }
-
-
 /* FOOTER */
 footer {
     background-color: #204459;
@@ -448,8 +401,6 @@ footer {
     padding: 1em 0;
     font-size: 14px;
 }
-
-
 /* Contenedor principal de las imágenes */
 .gallery {
     display: flex;
@@ -459,7 +410,6 @@ footer {
     gap: 30px; /* Espaciado entre las imágenes */
     /*padding: 16px;*/ /* Espaciado interno */
 }
-
 /* Estilos para las imágenes dentro de la galería */
 .gallery .drawing img {
     max-width: 100%;
@@ -467,7 +417,6 @@ footer {
     border-radius: 8px; /* Esquinas redondeadas */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
-
 /* Ajustar el diseño para pantallas más pequeñas */
 @media (max-width: 768px) {
     .gallery {
@@ -488,37 +437,31 @@ footer {
         padding: 8px; /* Reducir el espaciado en las pestañas */
     }
 }
-
 /* Ajustar los textos para que no se sobrepongan */
 .drawing .description {
     text-align: center;
     font-size: 1rem;
     margin-top: 8px; /* Espacio entre imagen y texto */
 }
-
 /* Botones responsivos */
 button {
     padding: 10px 16px;
     font-size: 1rem;
     border-radius: 4px;
 }
-
 @media (max-width: 480px) {
     button {
         font-size: 0.9rem; /* Reducir tamaño del texto en botones */
         padding: 8px 12px;
     }
 }
-
 /* Ajustes para diseño responsive */
-
 .gallery-container {
     display: grid;
     gap: 16px; /* Espaciado entre elementos */
     margin: 0 auto;
     width: 90%;
 }
-
 /* Estilos para pantallas grandes (escritorio) */
 @media (min-width: 1024px) {
     .gallery-container {
@@ -544,15 +487,12 @@ button {
       margin-top: 10px; /* Espacio entre la imagen y el texto */
     }
   }
-
 /* Responsividad */
 @media (max-width: 1024px) { /* Pantallas medianas (tablets) */
     .image-row {
       grid-template-columns: repeat(4, 1fr); /* 4 imágenes por fila */
     }
   }
-
-
 /* Estilos para pantallas medianas (tabletas) */
 @media (min-width: 768px) and (max-width: 1023px) {
     .gallery-container {
@@ -565,15 +505,12 @@ button {
       gap: 15px; /* Espaciado menor entre imágenes */
     }
   }
-
-
 /* Estilos para pantallas pequeñas (móviles) */
 @media (max-width: 767px) {
     .gallery-container {
         grid-template-columns: repeat(2, 1fr); /* 2 imágenes por fila */
     }
 }
-
 /* Estilo para texto debajo de las imágenes */
 .image-description {
     font-family: 'Satisfy', cursive;
@@ -581,7 +518,6 @@ button {
     font-size: 1rem;
     margin-top: 8px;
 }
-
 /* Ajustes generales para imágenes */
 .gallery-container img {
     width: 100%;
@@ -602,7 +538,6 @@ button {
     padding: 20px 10px;
     position: relative;
 }
-
 /* Botones de redes sociales */
 .social-media-buttons {
     margin: 15px 0;
@@ -618,27 +553,21 @@ button {
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
-
 .social-button.facebook {
     background-color: #3b5998;
 }
-
 .social-button.twitter {
     background-color: #1da1f2;
 }
-
 .social-button.instagram {
     background-color: #e4405f;
 }
-
 .social-button.linkedin {
     background-color: #0077b5;
 }
-
 .social-button:hover {
     opacity: 0.8;
 }
-
 /* Botón "Ir al inicio" */
 .back-to-top {
     margin-top: 15px;
@@ -651,7 +580,6 @@ button {
     transition: background-color 0.3s ease;
     font-family: 'Satisfy', cursive;
 }
-
 .back-to-top:hover {
     background-color: #589ec7;
 }
