@@ -50,7 +50,11 @@
         images.forEach(function (image) {
             image.addEventListener('click', function () {
                 modal.style.display = "block";
-                setTimeout(() => modal.classList.add("show"), 10);
+                setTimeout(() => {
+                    if (modalImg.src) {
+                        modal.classList.add("show");
+                     }
+                }, 10);
                 modalImg.src = this.src;
                 captionText.innerHTML = this.alt;
             });
@@ -61,10 +65,11 @@
                 modal.classList.remove("show");
                 setTimeout(() => modal.style.display = "none", 500);
             });
-        }
+        }  
         // Función para buscar imágenes
         function searchImage(searchValue = null) {
             searchValue = searchValue || searchInput.value.trim();
+
             // Obtener la pestaña visible antes de ocultarla
             const activeTabElement = document.querySelector('.tab-content[style="display: block;"]');
             if (activeTabElement) {
@@ -124,7 +129,6 @@
         // Asignar eventos a botones
         searchBtn.addEventListener('click', () => searchImage());
         backButton.addEventListener('click', showAllImages);
-
         // Guardar la última pestaña activa al cambiar de pestaña
         const tabButtons = document.querySelectorAll('.tab-button');
         tabButtons.forEach(button => {
@@ -144,7 +148,7 @@
                 alert('Error al enviar el mensaje: ' + JSON.stringify(error));
             });
     });
-    });    
+    });   
 })();
 // Función para regresar al inicio de la página
 function scrollToTop() {
