@@ -2,11 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Colección de Dibujos</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('kd4sAPR7gQ3VGmBDH'); // Reemplaza 'YOUR_USER_ID' con tu User ID de EmailJS
+    </script>
 </head>
 <body>
     <header>
@@ -19,7 +22,7 @@
         Te invito a que contemples cada uno de éllos..., ¡disfrútalo!. ¡Se irán subiendo nuevos dibujos aleatorios eventualmente!
     </h2>
     
-    <main>
+ <main>
         <!-- Sección de búsqueda -->
         <section class="search-section">
             <h2 class="satisfy-font">Si deseas saber más información acerca del dibujo. Búscalo por su IDNº!!!.</h2>
@@ -30,236 +33,225 @@
         </section>
         
         <!-- Contenedor de pestañas -->
-    <div class="tabs-container">
-        <button class="tab-button" onclick="openTab(event, 'pestaña1')">Pestaña 1</button>
-        <button class="tab-button" onclick="openTab(event, 'pestaña2')">Pestaña 2</button>
-    </div>
-
-    <!-- Contenido de cada pestaña -->
-    <div id="pestaña1" class="tab-content">
-        <div class="gallery" id="imageGallery">
-           <div class="image-row">
-             <div class="drawing" id="drawing1">
-                 <img src="img/darkness-A.jpg" alt="Darkness" data-caption= "Esta joven hermosa y con un físico maduro es una de las protagonistas de Kono Subarashii Sekai ni Shukufuku wo!. Tiene ojos
-                  azules y el pelo rubio lo lleva atado en una cola de caballo largo con un fleco y mechones a los costados de su rostro,
-                   con unas horquillas rojas en ambos mechones. Lleva una maya negra que cubre todo su cuerpo en la parte superior, un peto
-                    de metal con una hombrera de acero en el hombro izquierdo y algo parecido a un ala en el hombro derecho, lleva un vestido
-                     largo color amarillo con una cinta de piel con unas placas de metal a los costados. También usa botas de metal. Tiene una 
-                     cinta roja en el cuello. También usa un collar con el símbolo del Culto de Eris como parte de su devoción a esta misma....
-                      Tiene 19 años (actual) y mide 1,70cm... Se enorgullece de ser un Paladín y puede actuar de forma madura cuando es necesario.
-                       A pesar que a primera vista parece una persona fría, en realidad es una persona muy amable y atenta, especialmente hacia 
-                       sus compañeros. Puede avergonzarse y sonrojarse muy rápido. También es muy torpe y en ocasiones es propensa a crear problemas. Es la 
-                       última en unirse al equipo de Kazuma Sato.">
-                    <p>IDNº 1: Dibujo de Darkness.</p>
-                    <p class="description">Lalatina Dustiness Ford.</p>
-                    <p class="description">(Anime: Konosubarashi).</p>
-             </div>
-             <div class="drawing" id="drawing2">
-                 <img src="img/megumin-A.jpg" alt="Megumin" data-caption="Es una de las protagonistas de Kono Subarashii Sekai ni Shukufuku wo!.
-                 Es una archimaga del Clan Mágico De Los Demonios Carmesí, a la cual le encanta ver el mundo volar por los aires y la primera persona en unirse al equipo de Kazuma. 
-                 Megumin es una adolescente de baja estatura, con el pelo corto y un fleco dejando mechones cortos delanteros hasta su mentón, y mechones largos traseros cayendo 
-                 hasta su pecho. Como todos los demonios carmesí, tiene los ojos rojos e inclusive se ha mostrado que brillan en la oscuridad en el anime (no se sabe si esto es una
-                  característica racial que está presente en los demonios carmesí o propia de ella misma). Lleva una capa de color negro con amarillo por los bordes de esta, al igual
-                   que su ropa y su gorro de brujo lleva una cara parecida a la de un espantapájaros. Lleva un vestido rojo con bordes amarillos y un cinturón. Usa guantes sin dedos 
-                   en las manos y lleva un báculo de madera con el cual usa su hechizo Explosión. Usa una venda a lo largo de su pierna derecha y una media negra en la izquierda, 
-                   calza unas botas de piel color marrón suave. Lleva un collar negro en el cuello. Llevaba un parche rojo con una cruz blanca y bordes amarillos sobre su ojo izquierdo
-                    (que aseguraba que era un sello que, de sacárselo, causaría una catástrofe). Megumin es una chica sencilla y habla con un antiguo dialecto japonés. Ella suele ser muy
-                     hiperactiva y animada en algunas ocasiones, y tiene tendencias de chuunibyou al igual que los demás demonios carmesí. Es muy inteligente, pero carece de autocontrol, 
-                     especialmente cuando se trata de usar su magia explosiva. No tiene problemas en desperdiciar su hechizo en llanuras vacías o castillos abandonados, siempre y cuando 
-                     pueda usar una explosión al día. Normalmente Megumin es calmada y alegre, pero puede volverse fácilmente agresiva cuando se siente despreciada o desafiada. También 
-                     le llaman como <<La niña loca de las explosiones>>.">
-                    <p>IDNº 2: Dibujo de Megumin.</p>
-                    <p class="description">Megumin del Clan Carmesí.</p>
-                    <p class="description">(Anime: Konosubarashi).</p>
-             </div>
-             <div class="drawing" id="drawing3">
-                 <img src="img/Tejina-A.jpg" alt="Tejina-Senpai" data-caption="Tejina-Senpai es una linda estudiante de último año de la secundaria de Taneashi High School practicando sus trucos de magia. Si bien, es una maga experta pero solo 
-                 cuando nadie la está mirando ya que sufre de pánico escénico que la hace cometer errores garrafales en sus actos, cosa que lo hace ver como una torpe. Tiene una tendencia a terminar en las situaciones más embarazosas. A pesar de tener poco interés en un club dirigido por un mago incapaz, el estudiante
-                   de primer año (protagonista) se ve involucrado como un nuevo miembro, experimentando todo tipo de momentos incómodos con su excéntrico mentor. Como dato curioso es que nunca se le revela su nombre real a lo largo de la serie.">
-                    <p>IDNº 3: Dibujo de Tejina.</p>
-                    <p class="description">Tejina-Senpai. La maga experta pero, con pánico escénico.</p>
-                    <p class="description">(Anime: Tejina Senpai).</p>
-             </div>
-             <div class="drawing" id="drawing4">
-                 <img src="img/Rias-A.jpg" alt="Rias" data-caption="Rias es una hermosa mujer con una figura muy hermosa (protagonista feminina principal de la serie), de piel clara con ojos azul celeste casi verdosos y un característico cabello color carmesí que le llega hasta los muslos, con una sola hebra de caballo
-                 que sobresale de la parte superior de su cabeza. También tiene largo el flequillo que a parte de tapar una porción de su frente enmarca su cara al estar más largo por los laterales de esta. Aunque esta ha llevado varios tipos de ropa la que más usa es el uniforme para
-                  chicas de la academia, estando este compuesto de una camisa blanca de manga larga abotonada (aunque de manga corta para primavera/verano) con una cinta negra en el cuello de la camisa, también lleva una chaqueta sobre la camisa que le tapa los hombros y llega hasta 
-                  tan solo algo más arriba de la cintura dejando así la camisa blanca sobre el pecho al descubierto. Por último tiene falda magenta con acentos blancos y zapatos de vestir marrones con calcetines altos. Cuando se muestra como demonio le crecen unas alas de color negra en la espalda.
-                  A lo largo de la serie, Rias se demuestra que es amable y bondadosa con sus siervos. Piensa en  Issei (Protagonista masculino principal de la serie) como una persona especial, y siempre se pone celosa cuando las mujeres andan a su alrededor, convirtiéndose en una persona totalmente diferente cuando él y otras chicas van juntos,
-                   o cuando se trata de entrenamiento. Ella está orgullosa de nombre de su familia, pero no le gusta ser vista como Rias de la Familia Gremory.">
-                    <p>IDNº 4: Dibujo de Rias.</p>
-                    <p class="description">Rias Gremory. Reina del poderoso Clan Gremory.</p>
-                    <p class="description">(Anime: High School DXD).</p>
-             </div>
-             <div class="drawing" id="drawing5">
-                 <img src="img/Frieren-A.jpg" alt="Frieren" data-caption="Frieren, es la protagonista principal del anime Sousou No Frieren. Es una elfa que ha vivido más de mil años y que junto al Grupo de los Cuatro Héroes, acompañada del Paladín Himmel, el Sacerdote Heiter y el Guerrero enano Eisen, fueron los responsables de salvar al mundo tras derrotar al Rey Demonio.
-                 Como todos los Elfos, Frieren tiene un par de orejas largas y puntiagudas. En cuanto a su apariencia física, Frieren posee una figura pequeña y algo esbelta; su cabello es de color gris de tonalidad plateada, siendo largo y lacio el cual estando suelto le llega hasta sus rodillas; Frieren mantiene peinado su cabello con dos largas coletas ubicadas 
-                 paralelamente a ambos lados de su cabeza y un fleco partido en dos que se divide en su frente, sus ojos son de aspecto rasgado siendo estos de color verde y dos cejas pequeñas, cortas y semiredondas que surcan su cara. Su indumentaria ha variado a lo largo de la serie, consistiendo principalmente de una camisa de rayas horizontales blancas y negras, 
-                 con una chaqueta con adornos dorados metida en una falda a juego con un cinturón negro. Encima de su chaqueta lleva una capa corta de color blanco con toques dorados y un cuello blanco. También utiliza un par de medias negras largas, botas marrones y un par de aretes rojos con detalles de oro que pertenecieron a su maestra Flamme.
-                 Frieren posee una personalidad tranquila y amistosa, sin embargo su actitud distante la hace misteriosa para el resto de sus compañeros, con Heiter comentando que ellos como humanos, no pueden percibir las emociones de los Elfos. Al ser una Elfa, Frieren ha vivido aproximadamente un milenio lo que hace que su sentido del tiempo sea exageradamente 
-                 lento al dificultarsele el poder levantarse por la mañana, junto con una incapacidad totalmente profunda de comprender la mentalidad de los humanos. Esta es, en parte, una de las razones de la actitud distante de Frieren, ya que considera que largos periodos de tiempo son demasiado breves para poder establecer conexiones significativas. 
-                 Frieren tiene la costumbre de confiarse de forma muy exagerada ante encuentros con cofres falsos que se convierten en una fuente de humor puesto que Frieren a pesar de lo poderosa que es como hechicera, ella cae con facilidad en esta trampa lo que se convierte en una fuente inagotable de humor al reaccionar de forma infantil al caer en esta 
-                 trampa diciendo constantemente que siente miedo por lo oscuro.">
-                    <p>IDNº 5: Dibujo de Frieren.</p>
-                    <p class="description">Frieren la poderosa elfa maga.</p>
-                    <p class="description">(Anime: Sousou No Frieren).</p>
-             </div>
-          </div>
-          <div class="image-row">
-              <div class="drawing" id="drawing6">
-                 <img src="img/Hanabata-A.jpg" alt="Hanabata" data-caption="Es uno de los personajes secundarios de la serie Futoku no Guild. Es la hija del presidente de Nohkins Sports, una empresa de fabricación de equipamiento. Hanabata es alta y curvilínea, tiene el pelo corto de color rosa y ojos verdes. Suele llevar una armadura plateada sobre un vestido blanco y rojo.
-                 es normalmente tranquila y madura, pero puede ponerse nerviosa fácilmente cuando se trata de situaciones lascivas. Es humilde, ya que no permite que su condición de heredera de su familia se le suba a la cabeza. Cuando entra en modo Frenesí de las Flores, actúa como una borracha y ataca a cualquier monstruo con entusiasmo. Hana también se arrojará (con una
-                  velocidad y una fuerza sobrehumanas) contra Kikuru (protagonista de la serie) cuando tenga la oportunidad. Una vez que vuelve a la normalidad, tiene poco o ningún recuerdo de sus acciones, y sus sirvientes trabajan para asegurarse de que nunca descubra cómo es su modo Frenesí. Como guerrera, Hanabata cuenta con una fuerza y resistencia sobrehumanas, 
-                  lo que la convierte en la más fuerte del grupo físicamente. Junto con Kikuru y Noma (una de sus compañeras de grupo), es la más capaz en los turnos de combate. Sin embargo, incluso ella puede ser víctima de los ataques lascivos de un monstruo en determinadas circunstancias.">
-                    <p>IDNº 6: Dibujo de Hanabata.</p>
-                    <p class="description">Hanabata Nohkins es una fuerte guerrera.</p>
-                    <p class="description">(Anime: Futoku No Guild).</p> 
-              </div>
-              <div class="drawing" id="drawing7">
-                 <img src="img/zelda-A.jpg" alt="Zelda" data-caption="La princesa Zelda es un personaje principal de la saga de videojuegos de The Legend of Zelda. Es la princesa descendiente de la Familia Real de Hyrule. Zelda porta la Trifuerza de la Sabiduría, imbuida con la esencia de la Diosa Nayru que le permite discernir las decisiones más sabias, especialmente en 
-                 situaciones relativas al bienestar de Hyrule. Junto al héroe elegido por las Diosas, Link, Zelda trabaja con él para detener las fuerzas malignas que perjudican a su reino. A menudo, su adversario principal son las distintas encarnaciones de Ganondorf, el portador de la Trifuerza del Poder. Al principio de la cronología de la saga, Zelda nació como una
-                  Hyliana, siendo esta la encarnación mortal de la Diosa Hylia. Siguiendo con el linaje de esta sangre divina, sus descendientes femeninas son nombradas en su honor y están destinadas a recibir la Trifuerza de la Sabiduría. Varias princesas también portan la Trifuerza dorada, además de que son coronadas con el título de Princesa de Hyrule.
-                  es generalmente representada como la firme soberana del Reino de Hyrule portadora de la Trifuerza de la Sabiduría. Debido a la conexión con la Trifuerza, ella está destinada a conocer a Link, el héroe elegido por las Diosas y portador de la Trifuerza del Coraje, y Ganondorf, el portador de la Trifuerza del Poder. Su edad suele ser la misma que Link en 
-                  la mayoría de sus apariciones. Zelda es representada como una elegante, educada y cordial princesa de la realeza, con una gran responsabilidad por su reino. Ella es calmada, firme y de buen corazón, con un sentido muy marcado de la justicia. Zelda posee un gran aprecio y preocupación por los demás, y se muestra inclinada a sacrificarse o ponerse en peligro 
-                  para proteger a los demás. En Breath of the Wild, Zelda es una princesa aventurera, estudiosa, curiosa y sensible. A los 17 años todavía no había despertado su poder la Trifuerza de la Sabiduría, a pesar de haber entrenado desde su infancia. En esta entrega, cambia varios rasgos de su aspecto físico respecto a las demás, ya que esta vez se le ve usando ropa común, que consiste de una camisa azul 
-                  con bordados de color blanco, pantalones negros y botas marrones. En otras ocasiones, usa vestidos de la realeza. Su piel es algo más bronceada de lo usual, y posee una complexión física considerablemente robusta o corpulenta. Posee ojos verdes esmeralda y un notable cabello rubio dorado y largo.">
-                    <p>IDNº 7: Dibujo de Zelda.</p>
-                    <p class="description">Zelda: La princesa de Hyrule.</p>
-                    <p class="description">(Videojuego: The Legend Of Zelda: Breath Of The Wild).</p> 
-              </div>
-              <div class="drawing" id="drawing8">
-                 <img src="img/tino-A.jpg" alt="Tino" data-caption="Tino Shade es una cazadora en solitario registrada con licencia de nivel 4. Es aprendiz y protegida de Liz Smart . Es una seguidora devota de Krai Andrey (personaje principal de este anime). Además, desempeña el papel de deuteragonista de la serie. Ella tiene cabello negro corto y dos coleteros rojos a cada lado de su cabeza. Su atuendo de ladrón es una camisa sin mangas y pantalones
-                  cortos para enfatizar la movilidad, pero muestra mucho de su piel sedosa y suave. También usa guantes de manga larga con una armadura de brazo encima y botas largas. Ella tiene en su cintura múltiples bolsas donde guarda diferentes pociones y posee una daga que usa para luchar. 
-                  Ella siempre se muestra tranquila, y serena, pero por lo general parece una persona pobre o linda cuando Krai y Liz (su mentora) están involucrados. Es una persona seria de corazón, pero tenía la extraña costumbre de huir debido a que experimentó un entrenamiento fuera de lo común y atravesó experiencias terribles.
-                  Era una chica normal de pueblo en la capital. Pero su vida cambió cuando conoció en persona a Krai Andrey cuando tenía diez años. La pone bajo la tutela de Liz Smart. Así, Tino se convierte en un cazador de clase ladrona a partir de ese momento. Ella se alegra en voz alta cuando recibe el reconocimiento del maestro y de los miembros de su grupo a partir de entonces.
-                  Gracias al entrenamiento inhumano de su mentor, sus habilidades dan frutos. Tino alcanza su licencia de nivel 4 después de superar varios tipos de bóvedas del tesoro para principiantes como cazadora en solitario. Su poder es mayor que el de cualquier otra chica común de la capital. Con el duro y brutal entrenamiento de Liz, es capaz de luchar sola contra un jefe intermedio, pero aún no es 
-                  lo suficientemente fuerte como para luchar contra un monstruo de rango jefe.">
-                    <p>IDNº 8: Dibujo de Tino Shade.</p>
-                    <p class="description">Tino Shade. La cazadora con licencia de nivel 4.</p>
-                    <p class="description">(Anime: Nageki No Bourei Wa Intai Shitai).</p> 
-              </div>
-              <div class="drawing" id="drawing9">
-                <img src="img/pngegg.png" alt="Dibujo 9">
-                   <p>IDNº 9: Dibujo Desconocido.</p>
-                   <p class="description">Sin información.</p>
-                   <p class="description">(Sin información).</p> 
-             </div>
-              <div class="drawing" id="drawing10">
-                 <img src="img/cata1-final.jpg" alt="Cata-A" data-caption="Cata (Abreviación)... Es un dibujo especial para Cata, una linda chica muy amistosa, alegre, muy amable y simpática... ^^. Un Saludo para ella!.">
-                    <p>IDNº 10: Dibujo de Cata - A.</p>
-                    <p class="description">Cata ^^.</p>
-                    <p class="description">(Anime: No Aplica).</p> 
-             </div>
-          </div>
-          <div class="image-row">
-             <div class="drawing" id="drawing11">
-                 <img src="img/goku-Ul.JPG" alt="Gokú" data-caption="Es un ataque físico ofensivo y una variante del Puño Súper Dios utilizada por Son Goku mientras emplea la transformación homónima en el anime de Dragon Ball Super.
-                 Consiste en volar a una gran velocidad hacia el oponente y golpearlo con un puñetazo concentrado con una gran cantidad de energía. Es muy similar al Puño Súper Dios. Un Goku completamente furioso usa esta 
-                 técnica por primera vez contra Jiren, luego de que este haya atentado contra la vida de sus compañeros. Con un rugido furioso, Goku enciende aún más su aura azul divina mientras se lanza hacia adelante a velocidades insondables, asestando un golpe destructivo a su objetivo. 
-                 El Ultra Instinto Autónomo se considera el <<máximo absoluto>> para quienes dominan las artes marciales. Permite que cada parte del cuerpo del usuario piense y se mueva de forma independiente de las demás partes, a diferencia de lo que ocurre normalmente cuando una persona tiene 
-                    que pensar en sus movimientos de antemano y dejar que la orden viaje desde el cerebro hasta el sistema nervioso, una secuencia que desperdicia un tiempo de lucha precioso, ya que las señales de orden solo viajan a través de los nervios a una velocidad determinada. Cada parte del 
-                    cuerpo es capaz de pensar y actuar por sí sola, lo que permite al usuario reaccionar automáticamente ante cualquier situación o amenaza con el movimiento perfecto y en el momento justo. Ni siquiera necesita reconocer la amenaza, lo que significa que el usuario puede seguir luchando de 
-                    forma eficaz, incluso si está concentrado en otra cosa. Si bien el Ultra Instinto parece hacer al usuario virtualmente imbatible, no es una garantía absoluta contra todo peligro, como lo demuestra Goku cuando logró morder a Whis para escapar de su agarre, posiblemente porque no eran de peligro genuino para su ser.">
-                   <p>IDNº 11: Dibujo de Goku.</p>
-                   <p class="description">Goku despertando el Ultra Instinto en batalla.</p>
-                   <p class="description">(Anime: Dragon Ball Super).</p> 
-             </div>   
-             <div class="drawing" id="drawing12">
-                 <img src="img/saga-A.jpg" alt="Saga" data-caption="Saga fue el Santo Dorado de Géminis y principal antagonista desde la Saga de los Santos Negros hasta la Batalla de los doce templos, justamente por ser el usurpador del Gran Maestro del Santuario, con el fin de dominar el mundo y acabar con Saori y sus Santos al manipular al Ejército de Athena.
-                 Saga es considerado el santo de oro más poderoso de su generación. Además, antes de corromperse, era considerado como un dios, por ser un Santo justo y bondadoso con todos los cercanos al Santuario, siendo admirado y respetado por propios y extraños, sin embargo sus proezas solo han sido vistas frente a santos de bronce que fueron 
-                 capaces de superar o igualar a otros Santos de Oro. Fue el candidato a Gran Maestro del Santuario, pero la influencia de Kanon y su lado malvado, acrecentaron su lado turbio por lo cual, al ser elegido Aiolos como el supremo Maestro, lo llevó a cometer un golpe de estado, que se conocería como La Rebelión de Saga, matando a Shion y a Arles (solo anime). 
-                 Encontró la muerte al quitarse la vida con el báculo Niké (en el animé), producto de su arrepentimiento por haber levantado los puños contra su diosa. Posteriormente vuelve a la vida gracias al <<favor>> del Rey del Inframundo, Hades como parte de su plan para eliminar a Athena sin depender de sus Espectros resucitando no solamente a Saga 
-                    sino también a los antiguos santos: Shion de Aries, Shura de Capricornio, Camus de Acuario, Máscara Mortal de Cáncer y Afrodita de Piscis, así como a algunos santos de Plata (en el anime) como principales valuartes en su ofensiva contra el Santuario simulando obedecer sus órdenes. Desapareció en el infinito luego de haberse expirado sus doce 
-                    horas de vida temporal así como le ocurrió a sus compañeros; no obstante Saga y sus compañeros siguieron siendo tan fieles a su Diosa como cuando estaban vivos, ya que todo fue parte del plan de Shion para ayudar a Athena en su lucha contra Hades. Finalmente, su alma desapareció junto con las almas de sus compañeros, cuando se sacrificaron
-                     para destruir el Muro de los Lamentos con la flecha de Aiolos de Sagitario y permitir a los cinco santos de Bronce pasar por la Superdimensión para entrar a los Campos Elíseos. Saga es un hombre alto de contextura musculosa y alargada. Su cabello es uno de los más largos de los Santos Dorados; es erizado, solo mostrándose ondulado cuando se 
-                     lo recoge a un lado. Su cabello es de color azul violáceo, ojos de color viridián y piel pálida en la animación. Sus cejas son pronunciadas, de una tonalidad azul más oscura. De entre todos los Santos, tiene una particularidad: en su forma malvada o corrompida su cabello se vuelve gris claro y sus globos oculares adquieren un color rosado 
-                     ardiente indicados que están inyectados en sangre. Asimismo, su piel en este estado se torna pálida y desde la parte inferior de sus parpados bajan unas sombras que se hacen mas finas hasta llegar a la barbilla. Cada vez que cambia de personalidad, el color de su cabello cambia. Saga es un personaje con dos personalidades (una buena y la otra mala),
-                      como es originario su pertenencia a la constelación de Géminis. Tiene un lado bueno (marcado con el cabello de color rubio en el manga, azul en el anime) y el mal (que se caracteriza por el pelo gris), que lo llevó a sufrir de esquizofrenia, de trastorno disociativo de la personalidad y a veces termina teniendo discusiones consigo mismo.
-                      Es quizás unos de los personajes más complejos en toda la serie, es inteligente, astuto, serio, frío y muy poderoso, que a pesar de haber demostrado una postura de villano y ser el mayor responsable de las muertes a través de los Doce Templos, es considerado como un líder nato por la mayoría de sus compañeros a tal punto que en la saga de Hades, 
-                      es el encargado de llevar la cabeza de Athena ante el dios del inframundo, razones por la cual Shura de Capricornio y Camus de Acuario lo obedecen y lo sigan como líder sin oponerse a sus órdenes.">
-                    <p>IDNº 12: Dibujo de Saga.</p>
-                    <p class="description">Saga, El caballero dorado de Géminis.</p>
-                    <p class="description">(Anime: Saint Seiya).</p> 
-             </div>
-             <div class="drawing" id="drawing13">
-                 <img src="img/Shaka-A.jpeg" alt="Shaka" data-caption="Shaka, es el Santo de Oro de Virgo en la obra Saint Seiya y protege la Casa de Virgo en el Santuario. Es considerado por sus aliados como la reencarnación de Buda, pero realmente Buda es su mentor. Posee un poder de observación que le permite conocer la verdad escondida entre las apariencias.
-                 Perdió la vida a causa de la destructiva Exclamación de Athena ejecutada por Saga (Santo de Géminis), Shura (Santo de Capricornio) y Camus (Santo de Acuario), con el fin de, mediante su Octavo Sentido, poder acompañar a Athena en el Mundo de los Muertos. Finalmente, murió junto con los demás Santos de Oro para romper el Muro de los Lamentos. 
-                 Su aspecto es el de un hombre joven de cabello rubio largo, el cual le llega a las rodillas, y de ojos rojizos (azules, en el anime). Una de sus señas más particulares es el <<Bindi>> rojo que lleva en el centro de su frente. Shaka es un personaje que destaca por su serenidad y sabiduría, comprendiendo la fisiología del hombre y el mundo a la perfección. 
-                 Muestra actitudes de arrogancia, superioridad, y sobre todo, de fanfarronería y soberbia en sus combates contra seres que considere inferiores a él, como Santos de Bronce o Espectros de baja categoría. A pesar de su tranquilidad, Shaka es un hombre que llega a molestarse con facilidad y actuar con crueldad como se mostró en su encuentro con Ikki (el caballero de Fénix); además de que carece totalmente de piedad.
-                 Su lealtad hacia Athena es muy cuestionable, pues al inicio lucha por el Pontífice a pesar de darse cuenta de que sus rivales Santos de Bronce también luchaban por una causa justa. Para él lo importante es obedecer las órdenes de quien se encuentre al mando, siendo Saga (suplantando la identidad de Sion) en aquel momento y Saori una vez es reconocida como la verdadera Athena. Esto lo 
-                 compensa con su fuerza de voluntad, ya que fue capaz de dar su vida por la diosa Athena al enfrentar a tres Santos de Oro hacia una muerte segura. Al ser nativo de la India, creció y se entrenó para Santo en este lugar, a las orillas del Río Ganges. Shaka tenia la capacidad de entablar conversaciones con Buda, quien lo inculcaba en los más profundos misterios de la vida y el conocimiento.
-                 Creciendo rodeado de enfermedad, hambre y muerte, pero con un profundo amor hacia su país natal, se preguntaba el por qué de la vida misma si está llena de sufrimiento y al final es abatida por la mayor tristeza, la muerte. De esta manera y con la respuesta de Buda, fue instruido sobre la vida más allá de la muerte y que ésta no es el final de todo. Buda le dijo que, cuando pudiera realmente 
-                 comprender el significado de esas palabras, se convertiría y viviría como el hombre más cercano a los dioses. Esto le ayudó a despertar el Octavo Sentido posteriormente. Se había convertido en Santo de Oro, portando su Cloth a la temprana edad de siete años, al igual que la mayoría de Santos de Oro de su generación.">
-                    <p>IDNº 13: Dibujo de Shaka.</p>
-                    <p class="description">Shaka, El caballero dorado de Virgo.</p>
-                    <p class="description">(Anime: Saint Seiya).</p> 
-             </div>
-             <div class="drawing" id="drawing14">
-                 <img src="img/cata2-final.jpg" alt="Cata-B" data-caption="Cata (Abreviación)... Es un dibujo especial a pedido... Segunda toma de dibujo hacia Cata!!. Una linda chica amistosa, alegre, muy amable y simpática... ^^. Un Saludo para ella! ;).">
-                    <p>IDNº 14: Dibujo de Cata - B.</p>
-                    <p class="description">Cata ^^.</p>
-                    <p class="description">(Anime: No Aplica).</p> 
-             </div>
-             <div class="drawing" id="drawing15">
-                 <img src="img/pngegg.png" alt="Dibujo 15">
-                    <p>IDNº 15: Dibujo Desconocido.</p>
-                    <p class="description">Sin información.</p>
-                    <p class="description">(Sin información).</p> 
-             </div>
-          </div>
-        </div>
-    </div>
-
-    <div id="pestaña2" class="tab-content" style="display: none;">
-        <div class="gallery" id="imageGallery">
-            <div class="image-row">
-              <div class="drawing" id="drawing16">
-                  <img src="img/pngegg.png" alt="Dibujo 16">
-                     <p>IDNº 16: Dibujo Desconocido.</p>
-                     <p class="description">Sin información.</p>
-                     <p class="description">(Sin información).</p> 
-              </div>
-              <div class="drawing" id="drawing17">
-                  <img src="img/pngegg.png" alt="Dibujo 17">
-                     <p>IDNº 17: Dibujo Desconocido.</p>
-                     <p class="description">Sin información.</p>
-                     <p class="description">(Sin información).</p> 
-              </div>
-              <div class="drawing" id="drawing18">
-                  <img src="img/pngegg.png" alt="Dibujo 18">
-                     <p>IDNº 18: Dibujo Desconocido.</p>
-                     <p class="description">Sin información.</p>
-                     <p class="description">(Sin información).</p> 
-              </div>
-              <div class="drawing" id="drawing19">
-                  <img src="img/pngegg.png" alt="Dibujo 19">
-                     <p>IDNº 19: Dibujo Desconocido.</p>
-                     <p class="description">Sin información.</p>
-                     <p class="description">(Sin información).</p>
-              </div>
-              <div class="drawing" id="drawing20">
-                  <img src="img/pngegg.png" alt="Dibujo 20">
-                     <p>IDNº 20: Dibujo Desconocido.</p>
-                     <p class="description">Sin información.</p>
-                     <p class="description">(Sin información).</p>
-              </div>
-              <div class="drawing" id="drawing21">
-                  <img src="img/pngegg.png" alt="Dibujo 21">
-                     <p>IDNº 21: Dibujo Desconocido.</p>
-                     <p class="description">Sin información.</p>
-                     <p class="description">(Sin información).</p>
-              </div>
-            </div>
-           
+        <div class="tabs-container">
+            <button id="tab1" class="tab-button" role="tab" aria-controls="pestaña1" onclick="openTab(event, 'pestaña1')">Pestaña 1</button>
+            <button id="tab2" class="tab-button" role="tab" aria-controls="pestaña2" onclick="openTab(event, 'pestaña2')">Pestaña 2</button>
         </div>
 
-    </div>
+      <!-- Contenido de cada pestaña -->
+                <div id="pestaña1" class="tab-content" role="tabpanel" aria-labelledby="tab1">
+                    <div class="gallery" id="imageGallery1">
+                        <div class="image-row">
+                            <div class="drawing" id="drawing1">
+                                <img src="img/darkness-A.jpg" alt="Darkness" data-caption= "Esta joven hermosa Esta joven hermosa y con un físico maduro es una de las protagonistas de Kono Subarashii Sekai ni Shukufuku wo!. Tiene ojos
+                                azules y el pelo rubio lo lleva atado en una cola de caballo largo con un fleco y mechones a los costados de su rostro,
+                                 con unas horquillas rojas en ambos mechones. Lleva una maya negra que cubre todo su cuerpo en la parte superior, un peto
+                                  de metal con una hombrera de acero en el hombro izquierdo y algo parecido a un ala en el hombro derecho, lleva un vestido
+                                   largo color amarillo con una cinta de piel con unas placas de metal a los costados. También usa botas de metal. Tiene una 
+                                   cinta roja en el cuello. También usa un collar con el símbolo del Culto de Eris como parte de su devoción a esta misma....
+                                    Tiene 19 años (actual) y mide 1,70cm... Se enorgullece de ser un Paladín y puede actuar de forma madura cuando es necesario.
+                                     A pesar que a primera vista parece una persona fría, en realidad es una persona muy amable y atenta, especialmente hacia 
+                                     sus compañeros. Puede avergonzarse y sonrojarse muy rápido. También es muy torpe y en ocasiones es propensa a crear problemas. Es la 
+                                     última en unirse al equipo de Kazuma Sato.">
+                                    <p>IDNº 1: Dibujo de Darkness.</p>
+                                    <p class="description">Lalatina Dustiness Ford.</p>
+                                    <p class="description">(Anime: Konosubarashi).</p>
+                            </div>
+                            <div class="drawing" id="drawing2">
+                                <img src="img/megumin-A.jpg" alt="Megumin" data-caption="Es una de las protagonistas de Kono Subarashii Sekai ni Shukufuku wo!.
+                                Es una archimaga del Clan Mágico De Los Demonios Carmesí, a la cual le encanta ver el mundo volar por los aires y la primera persona en unirse al equipo de Kazuma. 
+                                Megumin es una adolescente de baja estatura, con el pelo corto y un fleco dejando mechones cortos delanteros hasta su mentón, y mechones largos traseros cayendo 
+                                hasta su pecho. Como todos los demonios carmesí, tiene los ojos rojos e inclusive se ha mostrado que brillan en la oscuridad en el anime (no se sabe si esto es una
+                                 característica racial que está presente en los demonios carmesí o propia de ella misma). Lleva una capa de color negro con amarillo por los bordes de esta, al igual
+                                  que su ropa y su gorro de brujo lleva una cara parecida a la de un espantapájaros. Lleva un vestido rojo con bordes amarillos y un cinturón. Usa guantes sin dedos 
+                                  en las manos y lleva un báculo de madera con el cual usa su hechizo Explosión. Usa una venda a lo largo de su pierna derecha y una media negra en la izquierda, 
+                                  calza unas botas de piel color marrón suave. Lleva un collar negro en el cuello. Llevaba un parche rojo con una cruz blanca y bordes amarillos sobre su ojo izquierdo
+                                   (que aseguraba que era un sello que, de sacárselo, causaría una catástrofe). Megumin es una chica sencilla y habla con un antiguo dialecto japonés. Ella suele ser muy
+                                    hiperactiva y animada en algunas ocasiones, y tiene tendencias de chuunibyou al igual que los demás demonios carmesí. Es muy inteligente, pero carece de autocontrol, 
+                                    especialmente cuando se trata de usar su magia explosiva. No tiene problemas en desperdiciar su hechizo en llanuras vacías o castillos abandonados, siempre y cuando 
+                                    pueda usar una explosión al día. Normalmente Megumin es calmada y alegre, pero puede volverse fácilmente agresiva cuando se siente despreciada o desafiada. También 
+                                    le llaman como <<La niña loca de las explosiones>>.">
+                                    <p>IDNº 2: Dibujo de Megumin.</p>
+                                    <p class="description">Megumin del Clan Carmesí.</p>
+                                    <p class="description">(Anime: Konosubarashi).</p>
+                            </div>
+                            <div class="drawing" id="drawing3">
+                                <img src="img/Tejina-A.jpg" alt="Tejina-Senpai" data-caption="Tejina-Senpai es una linda estudiante de último año de la secundaria de Taneashi High School practicando sus trucos de magia. Si bien, es una maga experta pero solo 
+                                cuando nadie la está mirando ya que sufre de pánico escénico que la hace cometer errores garrafales en sus actos, cosa que lo hace ver como una torpe. Tiene una tendencia a terminar en las situaciones más embarazosas. A pesar de tener poco interés en un club dirigido por un mago incapaz, el estudiante
+                                  de primer año (protagonista) se ve involucrado como un nuevo miembro, experimentando todo tipo de momentos incómodos con su excéntrico mentor. Como dato curioso es que nunca se le revela su nombre real a lo largo de la serie.">
+                                    <p>IDNº 3: Dibujo de Tejina.</p>
+                                    <p class="description">Tejina-Senpai. La maga experta pero, con pánico escénico.</p>
+                                    <p class="description">(Anime: Tejina Senpai).</p>
+                            </div>
+                            <div class="drawing" id="drawing4">
+                                <img src="img/Rias-A.jpg" alt="Rias" data-caption="Rias es una hermosa mujer con una figura muy hermosa (protagonista feminina principal de la serie), de piel clara con ojos azul celeste casi verdosos y un característico cabello color carmesí que le llega hasta los muslos, con una sola hebra de caballo
+                                que sobresale de la parte superior de su cabeza. También tiene largo el flequillo que a parte de tapar una porción de su frente enmarca su cara al estar más largo por los laterales de esta. Aunque esta ha llevado varios tipos de ropa la que más usa es el uniforme para
+                                 chicas de la academia, estando este compuesto de una camisa blanca de manga larga abotonada (aunque de manga corta para primavera/verano) con una cinta negra en el cuello de la camisa, también lleva una chaqueta sobre la camisa que le tapa los hombros y llega hasta 
+                                 tan solo algo más arriba de la cintura dejando así la camisa blanca sobre el pecho al descubierto. Por último tiene falda magenta con acentos blancos y zapatos de vestir marrones con calcetines altos. Cuando se muestra como demonio le crecen unas alas de color negra en la espalda.
+                                 A lo largo de la serie, Rias se demuestra que es amable y bondadosa con sus siervos. Piensa en  Issei (Protagonista masculino principal de la serie) como una persona especial, y siempre se pone celosa cuando las mujeres andan a su alrededor, convirtiéndose en una persona totalmente diferente cuando él y otras chicas van juntos,
+                                  o cuando se trata de entrenamiento. Ella está orgullosa de nombre de su familia, pero no le gusta ser vista como Rias de la Familia Gremory.">
+                                    <p>IDNº 4: Dibujo de Rias.</p>
+                                    <p class="description">Rias Gremory. Reina del poderoso Clan Gremory.</p>
+                                    <p class="description">(Anime: High School DXD).</p>
+                            </div>
+                            <div class="drawing" id="drawing5">
+                                <img src="img/Frieren-A.jpg" alt="Frieren" data-caption="Frieren, es la protagonista principal del anime Sousou No Frieren. Es una elfa que ha vivido más de mil años y que junto al Grupo de los Cuatro Héroes, acompañada del Paladín Himmel, el Sacerdote Heiter y el Guerrero enano Eisen, fueron los responsables de salvar al mundo tras derrotar al Rey Demonio.
+                                Como todos los Elfos, Frieren tiene un par de orejas largas y puntiagudas. En cuanto a su apariencia física, Frieren posee una figura pequeña y algo esbelta; su cabello es de color gris de tonalidad plateada, siendo largo y lacio el cual estando suelto le llega hasta sus rodillas; Frieren mantiene peinado su cabello con dos largas coletas ubicadas 
+                                paralelamente a ambos lados de su cabeza y un fleco partido en dos que se divide en su frente, sus ojos son de aspecto rasgado siendo estos de color verde y dos cejas pequeñas, cortas y semiredondas que surcan su cara. Su indumentaria ha variado a lo largo de la serie, consistiendo principalmente de una camisa de rayas horizontales blancas y negras, 
+                                con una chaqueta con adornos dorados metida en una falda a juego con un cinturón negro. Encima de su chaqueta lleva una capa corta de color blanco con toques dorados y un cuello blanco. También utiliza un par de medias negras largas, botas marrones y un par de aretes rojos con detalles de oro que pertenecieron a su maestra Flamme.
+                                Frieren posee una personalidad tranquila y amistosa, sin embargo su actitud distante la hace misteriosa para el resto de sus compañeros, con Heiter comentando que ellos como humanos, no pueden percibir las emociones de los Elfos. Al ser una Elfa, Frieren ha vivido aproximadamente un milenio lo que hace que su sentido del tiempo sea exageradamente 
+                                lento al dificultarsele el poder levantarse por la mañana, junto con una incapacidad totalmente profunda de comprender la mentalidad de los humanos. Esta es, en parte, una de las razones de la actitud distante de Frieren, ya que considera que largos periodos de tiempo son demasiado breves para poder establecer conexiones significativas. 
+                                Frieren tiene la costumbre de confiarse de forma muy exagerada ante encuentros con cofres falsos que se convierten en una fuente de humor puesto que Frieren a pesar de lo poderosa que es como hechicera, ella cae con facilidad en esta trampa lo que se convierte en una fuente inagotable de humor al reaccionar de forma infantil al caer en esta 
+                                trampa diciendo constantemente que siente miedo por lo oscuro.">
+                                    <p>IDNº 5: Dibujo de Frieren.</p>
+                                    <p class="description">Frieren la poderosa elfa maga.</p>
+                                    <p class="description">(Anime: Sousou No Frieren).</p>
+                            </div>
+                        </div>
+                        <div class="image-row">
+                            <div class="drawing" id="drawing6">
+                                <img src="img/Hanabata-A.jpg" alt="Hanabata" data-caption="Es uno de los personajes secundarios de la serie Futoku no Guild. Es la hija del presidente de Nohkins Sports, una empresa de fabricación de equipamiento. Hanabata es alta y curvilínea, tiene el pelo corto de color rosa y ojos verdes. Suele llevar una armadura plateada sobre un vestido blanco y rojo.
+                                es normalmente tranquila y madura, pero puede ponerse nerviosa fácilmente cuando se trata de situaciones lascivas. Es humilde, ya que no permite que su condición de heredera de su familia se le suba a la cabeza. Cuando entra en modo Frenesí de las Flores, actúa como una borracha y ataca a cualquier monstruo con entusiasmo. Hana también se arrojará (con una
+                                 velocidad y una fuerza sobrehumanas) contra Kikuru (protagonista de la serie) cuando tenga la oportunidad. Una vez que vuelve a la normalidad, tiene poco o ningún recuerdo de sus acciones, y sus sirvientes trabajan para asegurarse de que nunca descubra cómo es su modo Frenesí. Como guerrera, Hanabata cuenta con una fuerza y resistencia sobrehumanas, 
+                                 lo que la convierte en la más fuerte del grupo físicamente. Junto con Kikuru y Noma (una de sus compañeras de grupo), es la más capaz en los turnos de combate. Sin embargo, incluso ella puede ser víctima de los ataques lascivos de un monstruo en determinadas circunstancias.">
+                                    <p>IDNº 6: Dibujo de Hanabata.</p>
+                                    <p class="description">Hanabata Nohkins es una fuerte guerrera.</p>
+                                    <p class="description">(Anime: Futoku No Guild).</p> 
+                            </div>
+                            <div class="drawing" id="drawing7">
+                                <img src="img/zelda-A.jpg" alt="Zelda" data-caption="La princesa Zelda es un personaje principal de la saga de videojuegos de The Legend of Zelda. Es la princesa descendiente de la Familia Real de Hyrule. Zelda porta la Trifuerza de la Sabiduría, imbuida con la esencia de la Diosa Nayru que le permite discernir las decisiones más sabias, especialmente en 
+                                situaciones relativas al bienestar de Hyrule. Junto al héroe elegido por las Diosas, Link, Zelda trabaja con él para detener las fuerzas malignas que perjudican a su reino. A menudo, su adversario principal son las distintas encarnaciones de Ganondorf, el portador de la Trifuerza del Poder. Al principio de la cronología de la saga, Zelda nació como una
+                                 Hyliana, siendo esta la encarnación mortal de la Diosa Hylia. Siguiendo con el linaje de esta sangre divina, sus descendientes femeninas son nombradas en su honor y están destinadas a recibir la Trifuerza de la Sabiduría. Varias princesas también portan la Trifuerza dorada, además de que son coronadas con el título de Princesa de Hyrule.
+                                 es generalmente representada como la firme soberana del Reino de Hyrule portadora de la Trifuerza de la Sabiduría. Debido a la conexión con la Trifuerza, ella está destinada a conocer a Link, el héroe elegido por las Diosas y portador de la Trifuerza del Coraje, y Ganondorf, el portador de la Trifuerza del Poder. Su edad suele ser la misma que Link en 
+                                 la mayoría de sus apariciones. Zelda es representada como una elegante, educada y cordial princesa de la realeza, con una gran responsabilidad por su reino. Ella es calmada, firme y de buen corazón, con un sentido muy marcado de la justicia. Zelda posee un gran aprecio y preocupación por los demás, y se muestra inclinada a sacrificarse o ponerse en peligro 
+                                 para proteger a los demás. En Breath of the Wild, Zelda es una princesa aventurera, estudiosa, curiosa y sensible. A los 17 años todavía no había despertado su poder la Trifuerza de la Sabiduría, a pesar de haber entrenado desde su infancia. En esta entrega, cambia varios rasgos de su aspecto físico respecto a las demás, ya que esta vez se le ve usando ropa común, que consiste de una camisa azul 
+                                 con bordados de color blanco, pantalones negros y botas marrones. En otras ocasiones, usa vestidos de la realeza. Su piel es algo más bronceada de lo usual, y posee una complexión física considerablemente robusta o corpulenta. Posee ojos verdes esmeralda y un notable cabello rubio dorado y largo.">
+                                    <p>IDNº 7: Dibujo de Zelda.</p>
+                                    <p class="description">Zelda: La princesa de Hyrule.</p>
+                                    <p class="description">(Videojuego: The Legend Of Zelda: Breath Of The Wild).</p> 
+                            </div>
+                            <div class="drawing" id="drawing8">
+                                <img src="img/tino-A.jpg" alt="Tino" data-caption="Tino Shade es una cazadora en solitario registrada con licencia de nivel 4. Es aprendiz y protegida de Liz Smart . Es una seguidora devota de Krai Andrey (personaje principal de este anime). Además, desempeña el papel de deuteragonista de la serie. Ella tiene cabello negro corto y dos coleteros rojos a cada lado de su cabeza. Su atuendo de ladrón es una camisa sin mangas y pantalones
+                                cortos para enfatizar la movilidad, pero muestra mucho de su piel sedosa y suave. También usa guantes de manga larga con una armadura de brazo encima y botas largas. Ella tiene en su cintura múltiples bolsas donde guarda diferentes pociones y posee una daga que usa para luchar. 
+                                Ella siempre se muestra tranquila, y serena, pero por lo general parece una persona pobre o linda cuando Krai y Liz (su mentora) están involucrados. Es una persona seria de corazón, pero tenía la extraña costumbre de huir debido a que experimentó un entrenamiento fuera de lo común y atravesó experiencias terribles.
+                                Era una chica normal de pueblo en la capital. Pero su vida cambió cuando conoció en persona a Krai Andrey cuando tenía diez años. La pone bajo la tutela de Liz Smart. Así, Tino se convierte en un cazador de clase ladrona a partir de ese momento. Ella se alegra en voz alta cuando recibe el reconocimiento del maestro y de los miembros de su grupo a partir de entonces.
+                                Gracias al entrenamiento inhumano de su mentor, sus habilidades dan frutos. Tino alcanza su licencia de nivel 4 después de superar varios tipos de bóvedas del tesoro para principiantes como cazadora en solitario. Su poder es mayor que el de cualquier otra chica común de la capital. Con el duro y brutal entrenamiento de Liz, es capaz de luchar sola contra un jefe intermedio, pero aún no es 
+                                lo suficientemente fuerte como para luchar contra un monstruo de rango jefe.">
+                                    <p>IDNº 8: Dibujo de Tino Shade.</p>
+                                    <p class="description">Tino Shade. La cazadora con licencia de nivel 4.</p>
+                                    <p class="description">(Anime: Nageki No Bourei Wa Intai Shitai).</p> 
+                            </div>
+                            <div class="drawing" id="drawing9">
+                                <img src="img/pngegg.png" alt="¡Personaje Incógnito!">
+                                    <p>IDNº 9: Dibujo Desconocido.</p>
+                                    <p class="description">Sin información.</p>
+                                    <p class="description">(Sin información).</p> 
+                            </div>
+                            <div class="drawing" id="drawing10">
+                                <img src="img/cata1-final.jpg" alt="Cata-A" data-caption="Cata (Abreviación)... Es un dibujo especial para Cata, una linda chica muy amistosa, alegre, muy amable y simpática... ^^. Un Saludo para ella!." >
+                                    <p>IDNº 10: Dibujo de Cata - A.</p>
+                                    <p class="description">Cata ^^.</p>
+                                    <p class="description">(Anime: No Aplica).</p> 
+                            </div>
+                        </div>
+                        <div class="image-row">
+                            <div class="drawing" id="drawing11">
+                                <img src="img/goku-Ul.JPG" alt="Gokú" data-caption="Es un ataque físico ofensivo y una variante del Puño Súper Dios utilizada por Son Goku mientras emplea la transformación homónima en el anime de Dragon Ball Super.
+                                Consiste en volar a una gran velocidad hacia el oponente y golpearlo con un puñetazo concentrado con una gran cantidad de energía. Es muy similar al Puño Súper Dios. Un Goku completamente furioso usa esta 
+                                técnica por primera vez contra Jiren, luego de que este haya atentado contra la vida de sus compañeros. Con un rugido furioso, Goku enciende aún más su aura azul divina mientras se lanza hacia adelante a velocidades insondables, asestando un golpe destructivo a su objetivo. 
+                                El Ultra Instinto Autónomo se considera el <<máximo absoluto>> para quienes dominan las artes marciales. Permite que cada parte del cuerpo del usuario piense y se mueva de forma independiente de las demás partes, a diferencia de lo que ocurre normalmente cuando una persona tiene 
+                                   que pensar en sus movimientos de antemano y dejar que la orden viaje desde el cerebro hasta el sistema nervioso, una secuencia que desperdicia un tiempo de lucha precioso, ya que las señales de orden solo viajan a través de los nervios a una velocidad determinada. Cada parte del 
+                                   cuerpo es capaz de pensar y actuar por sí sola, lo que permite al usuario reaccionar automáticamente ante cualquier situación o amenaza con el movimiento perfecto y en el momento justo. Ni siquiera necesita reconocer la amenaza, lo que significa que el usuario puede seguir luchando de 
+                                   forma eficaz, incluso si está concentrado en otra cosa. Si bien el Ultra Instinto parece hacer al usuario virtualmente imbatible, no es una garantía absoluta contra todo peligro, como lo demuestra Goku cuando logró morder a Whis para escapar de su agarre, posiblemente porque no eran de peligro genuino para su ser.">
+                                    <p>IDNº 11: Dibujo de Goku.</p>
+                                    <p class="description">Goku despertando el Ultra Instinto en batalla.</p>
+                                    <p class="description">(Anime: Dragon Ball Super).</p> 
+                            </div>   
+                            <div class="drawing" id="drawing12">
+                                <img src="img/saga-A.jpg" alt="Saga" data-caption="Saga fue el Santo Dorado de Géminis y principal antagonista desde la Saga de los Santos Negros hasta la Batalla de los doce templos, justamente por ser el usurpador del Gran Maestro del Santuario, con el fin de dominar el mundo y acabar con Saori y sus Santos al manipular al Ejército de Athena.
+                                Saga es considerado el santo de oro más poderoso de su generación. Además, antes de corromperse, era considerado como un dios, por ser un Santo justo y bondadoso con todos los cercanos al Santuario, siendo admirado y respetado por propios y extraños, sin embargo sus proezas solo han sido vistas frente a santos de bronce que fueron 
+                                capaces de superar o igualar a otros Santos de Oro. Fue el candidato a Gran Maestro del Santuario, pero la influencia de Kanon y su lado malvado, acrecentaron su lado turbio por lo cual, al ser elegido Aiolos como el supremo Maestro, lo llevó a cometer un golpe de estado, que se conocería como La Rebelión de Saga, matando a Shion y a Arles (solo anime). 
+                                Encontró la muerte al quitarse la vida con el báculo Niké (en el animé), producto de su arrepentimiento por haber levantado los puños contra su diosa. Posteriormente vuelve a la vida gracias al <<favor>> del Rey del Inframundo, Hades como parte de su plan para eliminar a Athena sin depender de sus Espectros resucitando no solamente a Saga 
+                                   sino también a los antiguos santos: Shion de Aries, Shura de Capricornio, Camus de Acuario, Máscara Mortal de Cáncer y Afrodita de Piscis, así como a algunos santos de Plata (en el anime) como principales valuartes en su ofensiva contra el Santuario simulando obedecer sus órdenes. Desapareció en el infinito luego de haberse expirado sus doce 
+                                   horas de vida temporal así como le ocurrió a sus compañeros; no obstante Saga y sus compañeros siguieron siendo tan fieles a su Diosa como cuando estaban vivos, ya que todo fue parte del plan de Shion para ayudar a Athena en su lucha contra Hades. Finalmente, su alma desapareció junto con las almas de sus compañeros, cuando se sacrificaron
+                                    para destruir el Muro de los Lamentos con la flecha de Aiolos de Sagitario y permitir a los cinco santos de Bronce pasar por la Superdimensión para entrar a los Campos Elíseos. Saga es un hombre alto de contextura musculosa y alargada. Su cabello es uno de los más largos de los Santos Dorados; es erizado, solo mostrándose ondulado cuando se 
+                                    lo recoge a un lado. Su cabello es de color azul violáceo, ojos de color viridián y piel pálida en la animación. Sus cejas son pronunciadas, de una tonalidad azul más oscura. De entre todos los Santos, tiene una particularidad: en su forma malvada o corrompida su cabello se vuelve gris claro y sus globos oculares adquieren un color rosado 
+                                    ardiente indicados que están inyectados en sangre. Asimismo, su piel en este estado se torna pálida y desde la parte inferior de sus parpados bajan unas sombras que se hacen mas finas hasta llegar a la barbilla. Cada vez que cambia de personalidad, el color de su cabello cambia. Saga es un personaje con dos personalidades (una buena y la otra mala),
+                                     como es originario su pertenencia a la constelación de Géminis. Tiene un lado bueno (marcado con el cabello de color rubio en el manga, azul en el anime) y el mal (que se caracteriza por el pelo gris), que lo llevó a sufrir de esquizofrenia, de trastorno disociativo de la personalidad y a veces termina teniendo discusiones consigo mismo.
+                                     Es quizás unos de los personajes más complejos en toda la serie, es inteligente, astuto, serio, frío y muy poderoso, que a pesar de haber demostrado una postura de villano y ser el mayor responsable de las muertes a través de los Doce Templos, es considerado como un líder nato por la mayoría de sus compañeros a tal punto que en la saga de Hades, 
+                                     es el encargado de llevar la cabeza de Athena ante el dios del inframundo, razones por la cual Shura de Capricornio y Camus de Acuario lo obedecen y lo sigan como líder sin oponerse a sus órdenes.">
+                                    <p>IDNº 12: Dibujo de Saga.</p>
+                                    <p class="description">Saga, El caballero dorado de Géminis.</p>
+                                    <p class="description">(Anime: Saint Seiya).</p> 
+                            </div>
+                            <div class="drawing" id="drawing13">
+                                <img src="img/Shaka-A.jpeg" alt="Shaka" data-caption="Shaka, es el Santo de Oro de Virgo en la obra Saint Seiya y protege la Casa de Virgo en el Santuario. Es considerado por sus aliados como la reencarnación de Buda, pero realmente Buda es su mentor. Posee un poder de observación que le permite conocer la verdad escondida entre las apariencias.
+                                Perdió la vida a causa de la destructiva Exclamación de Athena ejecutada por Saga (Santo de Géminis), Shura (Santo de Capricornio) y Camus (Santo de Acuario), con el fin de, mediante su Octavo Sentido, poder acompañar a Athena en el Mundo de los Muertos. Finalmente, murió junto con los demás Santos de Oro para romper el Muro de los Lamentos. 
+                                Su aspecto es el de un hombre joven de cabello rubio largo, el cual le llega a las rodillas, y de ojos rojizos (azules, en el anime). Una de sus señas más particulares es el <<Bindi>> rojo que lleva en el centro de su frente. Shaka es un personaje que destaca por su serenidad y sabiduría, comprendiendo la fisiología del hombre y el mundo a la perfección. 
+                                Muestra actitudes de arrogancia, superioridad, y sobre todo, de fanfarronería y soberbia en sus combates contra seres que considere inferiores a él, como Santos de Bronce o Espectros de baja categoría. A pesar de su tranquilidad, Shaka es un hombre que llega a molestarse con facilidad y actuar con crueldad como se mostró en su encuentro con Ikki (el caballero de Fénix); además de que carece totalmente de piedad.
+                                Su lealtad hacia Athena es muy cuestionable, pues al inicio lucha por el Pontífice a pesar de darse cuenta de que sus rivales Santos de Bronce también luchaban por una causa justa. Para él lo importante es obedecer las órdenes de quien se encuentre al mando, siendo Saga (suplantando la identidad de Sion) en aquel momento y Saori una vez es reconocida como la verdadera Athena. Esto lo 
+                                compensa con su fuerza de voluntad, ya que fue capaz de dar su vida por la diosa Athena al enfrentar a tres Santos de Oro hacia una muerte segura. Al ser nativo de la India, creció y se entrenó para Santo en este lugar, a las orillas del Río Ganges. Shaka tenia la capacidad de entablar conversaciones con Buda, quien lo inculcaba en los más profundos misterios de la vida y el conocimiento.
+                                Creciendo rodeado de enfermedad, hambre y muerte, pero con un profundo amor hacia su país natal, se preguntaba el por qué de la vida misma si está llena de sufrimiento y al final es abatida por la mayor tristeza, la muerte. De esta manera y con la respuesta de Buda, fue instruido sobre la vida más allá de la muerte y que ésta no es el final de todo. Buda le dijo que, cuando pudiera realmente 
+                                comprender el significado de esas palabras, se convertiría y viviría como el hombre más cercano a los dioses. Esto le ayudó a despertar el Octavo Sentido posteriormente. Se había convertido en Santo de Oro, portando su Cloth a la temprana edad de siete años, al igual que la mayoría de Santos de Oro de su generación.">
+                                    <p>IDNº 13: Dibujo de Shaka.</p>
+                                    <p class="description">Shaka, El caballero dorado de Virgo.</p>
+                                    <p class="description">(Anime: Saint Seiya).</p> 
+                            </div>
+                            <div class="drawing" id="drawing14">
+                                <img src="img/cata2-final.jpg" alt="Cata-B" data-caption="Cata (Abreviación)... Es un dibujo especial a pedido... Segunda toma de dibujo hacia Cata!!. Una linda chica amistosa, alegre, muy amable y simpática... ^^. Un Saludo para ella! ;).">
+                                    <p>IDNº 14: Dibujo de Cata - B.</p>
+                                    <p class="description">Cata ^^.</p>
+                                    <p class="description">(Anime: No Aplica).</p> 
+                            </div>
+                            <div class="drawing" id="drawing15">
+                                <img src="img/pngegg.png" alt="¡Personaje Incógnito!">
+                                    <p>IDNº 15: Dibujo Desconocido.</p>
+                                    <p class="description">Sin información.</p>
+                                    <p class="description">(Sin información).</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+  
+                <div id="pestaña2" class="tab-content" role="tabpanel" aria-labelledby="tab2" style="display: none;">
+                    <div class="gallery" id="imageGallery2">
+                        <div class="image-row">
+                            <div class="drawing" id="drawing16">
+                                 <img src="img/pngegg.png" alt="¡Personaje Incógnito!">
+                                    <p>IDNº 16: Dibujo Desconocido.</p>
+                                    <p class="description">Sin información.</p>
+                                    <p class="description">(Sin información).</p> 
+                            </div>
+                            <div class="drawing" id="drawing17">
+                                <img src="img/pngegg.png" alt="¡Personaje Incógnito!">
+                                    <p>IDNº 17: Dibujo Desconocido.</p>
+                                    <p class="description">Sin información.</p>
+                                    <p class="description">(Sin información).</p> 
+                            </div>
+                            <div class="drawing" id="drawing18">
+                                <img src="img/pngegg.png" alt="¡Personaje Incógnito!">
+                                    <p>IDNº 18: Dibujo Desconocido.</p>
+                                    <p class="description">Sin información.</p>
+                                    <p class="description">(Sin información).</p> 
+                            </div>
+                            <div class="drawing" id="drawing19">
+                                <img src="img/pngegg.png" alt="¡Personaje Incógnito!">
+                                    <p>IDNº 19: Dibujo Desconocido.</p>
+                                    <p class="description">Sin información.</p>
+                                    <p class="description">(Sin información).</p> 
+                            </div>
+                            <div class="drawing" id="drawing20">
+                                <img src="img/pngegg.png" alt="¡Personaje Incógnito!">
+                                    <p>IDNº 20: Dibujo Desconocido.</p>
+                                    <p class="description">Sin información.</p>
+                                    <p class="description">(Sin información).</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <script src="script.js"></script>
        
-       
-
-
+    </main> 
     <!-- Sección de contacto -->
          <!-- SECCION CONTACTO -->
     <section id="contacto" class="contacto satisfy-font">
@@ -302,25 +294,33 @@
             </div>
         </div>
     </section>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script src="script.js"></script>
-    </main>
+
+
     
-    <!-- Modal -->
-    <div id="myModal" class="modal">
+   <!-- Modal -->
+   <div id="myModal" class="modal">
         <span class="close">&times;</span>
         <div class="modal-content-container">
             <img class="modal-content" id="img01">
             <div id="caption"></div>
         </div>
-    </div>
+   </div>
 
     <!-- Footer -->
     <footer class="site-footer">
+        <div class="social-media-buttons">
+            <a href="https://barcklan.wordpress.com/" target="_blank" class="social-button facebook">Barcklan-Inforadd</a>
+            <a href="https://barcklan.github.io/Barcklan/" target="_blank" class="social-button twitter">Portafolio</a>
+            <a href="https://instagram.com/barcklan/" target="_blank" class="social-button instagram">Instagram</a>
+            <a href="https://linkedin.com/in/claudio-andres-diaz-vargas" target="_blank" class="social-button linkedin">LinkedIn</a>
+        </div>
+        <button class="back-to-top" onclick="scrollToTop()">Ir al inicio</button>
         <p>&copy; 2024 Barcklan. Todos los derechos reservados.</p>
     </footer>
 
     <!-- Scripts -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
+
