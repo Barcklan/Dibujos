@@ -6,7 +6,7 @@ body {
     background: linear-gradient(rgba(255, 255, 255, 0.342), rgba(255, 255, 255, 0.5)), 
                 url('img/textura3.webp') no-repeat center fixed;
     background-size: cover;
-    background-color: #68c499; /* Fondo de respaldo */
+    background-color: #ffffff; /* Fondo de respaldo */
     background-attachment: fixed; /* Fija el fondo */
 }
 
@@ -38,16 +38,7 @@ header h1 {
     font-size: 2rem;
     margin: 0;
 }
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-    header .logo {
-        max-width: 100px; /* Reduce el tamaño del logo en pantallas más pequeñas */
-    }
 
-    header h1 {
-        font-size: 1.5rem; /* Reduce el tamaño del texto */
-    }
-}
 /* BÚSQUEDA */
 .search-section {
     text-align: center;
@@ -445,12 +436,14 @@ footer {
 }
 /* Contenedor principal de las imágenes */
 .gallery {
-    display: flex;
-    /*flex-wrap: wrap;*/
+    display: grid;
+    flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
+    margin: 0 auto;
+    max-width: 1200px; /* Ancho máximo */
     gap: 30px; /* Espaciado entre las imágenes */
-    /*padding: 16px;*/ /* Espaciado interno */
+    padding: 20px; /* Espaciado interno */
 }
 /* Estilos para las imágenes dentro de la galería */
 .gallery .drawing img {
@@ -462,8 +455,8 @@ footer {
 /* Ajustar el diseño para pantallas más pequeñas */
 @media (max-width: 768px) {
     .gallery {
-        gap: 8px; /* Reducir el espacio entre las imágenes */
-        padding: 8px;
+        gap: 10px; /* Espaciado entre las imágenes */
+        padding: 10px; /* Ajustar el padding */
     }
 
     .gallery .drawing img {
@@ -472,31 +465,34 @@ footer {
 
     .tabs-container {
         flex-direction: column; /* Cambiar orientación de las pestañas */
-        gap: 8px;
+        gap: 10px;
     }
 
     .tab-content {
-        padding: 8px; /* Reducir el espaciado en las pestañas */
+        padding: 10px; /* Reducir el espaciado en las pestañas */
     }
 }
+
 /* Ajustar los textos para que no se sobrepongan */
 .drawing .description {
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.9rem; /* Reducir el tamaño del texto */
     margin-top: 8px; /* Espacio entre imagen y texto */
 }
+
 /* Botones responsivos */
 button {
     padding: 10px 16px;
     font-size: 1rem;
     border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
-@media (max-width: 480px) {
-    button {
-        font-size: 0.9rem; /* Reducir tamaño del texto en botones */
-        padding: 8px 12px;
-    }
+button:hover {
+    background-color: #589ec7;
+    transform: scale(1.1); /* Crece un poco al hacer hover */
 }
+
+
 /* Ajustes para diseño responsive */
 .gallery-container {
     display: grid;
@@ -504,53 +500,90 @@ button {
     margin: 0 auto;
     width: 90%;
 }
+
 /* Estilos para pantallas grandes (escritorio) */
 @media (min-width: 1024px) {
+    .image-row {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); /* 3 imágenes por fila */
+        gap: 20px; /* Espaciado entre imágenes */
+    }
     .gallery-container {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr); /* 5 imágenes por fila */
-      gap: 20px; /* Espaciado general entre imágenes */
-      justify-content: center; /* Centra la galería horizontalmente */
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); /* 4 imágenes por fila */
+        gap: 20px; /* Espaciado general entre imágenes */
+        justify-items: center; /* Centra cada elemento dentro de su celda */
+        margin: 0 auto; /* Centra el contenedor de la galería */
+        width: 100%; /* Usar el ancho completo disponible */
+        max-width: 1200px; /* Limitar el ancho máximo de la galería */
     }
   
     .gallery-item {
-      margin-bottom: 20px; /* Espacio adicional entre filas */
-      padding: 10px; /* Espaciado interno para cada imagen */
+        display: flex;
+        flex-direction: column; /* Organiza imagen y texto verticalmente */
+        align-items: center; /* Centrar contenido dentro del contenedor */
+        justify-content: center; /* Centrar verticalmente si hay texto */
     }
   
     img {
-      width: 100%; /* Ajusta el ancho de la imagen al contenedor */
-      border-radius: 8px; /* Opcional: bordes redondeados */
+        width: 100%; /* Ajusta el ancho de la imagen al contenedor */
+        max-width: 250px; /* Limita el tamaño máximo de la imagen */
+        border-radius: 8px; /* Opcional: bordes redondeados */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+        margin-bottom: 10px; /* Espaciado con el texto */
     }
   
     .gallery-item-text {
-      text-align: center; /* Centra el texto debajo de cada imagen */
-      font-family: "Satisfy", cursive;
-      margin-top: 10px; /* Espacio entre la imagen y el texto */
-    }
-  }
-/* Responsividad */
-@media (max-width: 1024px) { /* Pantallas medianas (tablets) */
-    .image-row {
-      grid-template-columns: repeat(4, 1fr); /* 4 imágenes por fila */
-    }
-  }
-/* Estilos para pantallas medianas (tabletas) */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .gallery-container {
-        grid-template-columns: repeat(4, 1fr); /* 4 imágenes por fila */
+        text-align: center; /* Centra el texto debajo de cada imagen */
+        font-family: "Satisfy", cursive;
+        margin-top: 10px; /* Espacio entre la imagen y el texto */
+        font-size: 14px;
     }
 }
-@media (max-width: 768px) { /* Pantallas pequeñas (móviles) */
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
     .image-row {
-      grid-template-columns: repeat(2, 1fr); /* 2 imágenes por fila */
-      gap: 15px; /* Espaciado menor entre imágenes */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 imágenes por fila */
+        gap: 13px; /* Espaciado entre imágenes */
     }
-  }
-/* Estilos para pantallas pequeñas (móviles) */
-@media (max-width: 767px) {
-    .gallery-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 imágenes por fila */
+    header .logo {
+        max-width: 100px; /* Reduce el tamaño del logo en pantallas más pequeñas */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Reduce el tamaño del texto */
+    }
+}
+/* Pantallas medianas (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .image-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 3 imágenes por fila */
+        gap: 15px; /* Espaciado entre imágenes */
+    }
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 640px) {
+    .image-row {
+        grid-template-columns: repeat(2, 1fr); /* 1 imagen por fila */
+        gap: 10px; /* Espaciado menor */
+    }
+    button {
+        font-size: 0.85rem; /* Reducir tamaño del texto en botones */
+        padding: 8px 12px;
+    }
+}
+/* Pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .image-row {
+        grid-template-columns: repeat(1, 1fr); /* 1 imagen por fila */
+        gap: 10px; /* Espaciado menor */
+    }
+    button {
+        font-size: 0.85rem; /* Reducir tamaño del texto en botones */
+        padding: 8px 12px;
     }
 }
 /* Estilo para texto debajo de las imágenes */
@@ -560,6 +593,7 @@ button {
     font-size: 1rem;
     margin-top: 8px;
 }
+
 /* Ajustes generales para imágenes */
 .gallery-container img {
     width: 100%;
@@ -567,11 +601,6 @@ button {
     border: 2px solid #0078a0; /* Borde azul para consistencia */
     border-radius: 8px; /* Borde redondeado */
 }
-@media (max-width: 576px) { /* Pantallas extra pequeñas */
-    .image-row {
-      grid-template-columns: repeat(1, 1fr); /* 1 imagen por fila */
-    }
-  }
   /* Pie de página */
 .site-footer {
     background-color: #222;
@@ -624,4 +653,9 @@ button {
 }
 .back-to-top:hover {
     background-color: #589ec7;
+}
+button:focus,
+.tab-button:focus {
+    outline: 2px dashed var(--primary-color);
+    outline-offset: 4px;
 }
