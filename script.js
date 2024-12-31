@@ -53,19 +53,26 @@
                 setTimeout(() => {
                     if (modalImg.src) {
                         modal.classList.add("show");
-                     }
+                    }
                 }, 10);
-                modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
-            });
+
+                // Asignar imagen al modal: usar data-modal-src si está definido
+                const modalImageSrc = image.getAttribute('data-modal-src') || image.src;
+                modalImg.src = modalImageSrc;
+                captionText.innerHTML = image.alt;
+
+                // Asignar el texto al modal
+                captionText.innerHTML = this.getAttribute('alt') || this.alt; // Usar data-caption o alt
+             });
         });
         // Modal: Cerrar
-        if (span) {
-            span.addEventListener('click', function () {
-                modal.classList.remove("show");
-                setTimeout(() => modal.style.display = "none", 500);
-            });
-        }  
+        span.addEventListener('click', function () {
+            // Quita la clase para ocultar con transición
+            modal.classList.remove("show");
+            setTimeout(() => {
+                modal.style.display = "none"; // Oculta completamente después de la animación
+            }, 500); // Duración de la animación (0.5s, igual que en el CSS)
+        });
         // Función para buscar imágenes
         function searchImage(searchValue = null) {
             searchValue = searchValue || searchInput.value.trim();
