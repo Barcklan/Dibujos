@@ -659,3 +659,15 @@ button:focus,
     outline: 2px dashed var(--primary-color);
     outline-offset: 4px;
 }
+.cc-icons {
+    display: flex;               /* Activa el modo Flexbox */
+    justify-content: center;     /* Centra los íconos horizontalmente */
+    align-items: center;         /* Alinea los íconos verticalmente */
+    gap: 5px;                   /* Espaciado entre los íconos */
+    margin-top: 10px;            /* Margen opcional para separación vertical */
+  }
+  
+  .cc-icons img {
+    height: 22px;                /* Tamaño uniforme de los íconos */
+    vertical-align: middle;      /* Alineación vertical */
+  }
